@@ -14,7 +14,7 @@ pipeline {
         stage("Deploy"){
             steps{
                 sshagent(['a63e4f49-2194-4771-ba8a-2efab8f43b79']) {
-                    sh "scp -o StrictHostKeyChecking=no target/SpringBootStaticWeb-0.0.1-SNAPSHOT.jar ubuntu@18.188.26.211:/opt/tomcat/webapps"
+                    sh "scp -o StrictHostKeyChecking=no target/javawebdemo.war ubuntu@18.188.26.211:/opt/wildfly/standalone/deployments"
     // some block
 }
             }
